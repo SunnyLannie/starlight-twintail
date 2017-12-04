@@ -5,12 +5,16 @@
 .pageHeader {
   background-color: #222;
   height: 150px;
-  padding: 20px;
+  padding: 10px;
   color: white;
 }
 
 .appTitle {
-  font-size: 1.5em;
+  font-size: 50px;
+  padding-left: 100px;
+  padding-right: ;
+  padding-top: 60px;
+  padding-bottom: ;
 }
 
 .notice {
