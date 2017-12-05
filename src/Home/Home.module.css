@@ -3,30 +3,32 @@
 }
 
 .pageHeader {
-  background-color: #222;
+  background-color: #EB6B8D;
   height: 150px;
   padding: 10px;
   color: white;
 }
 
 .appTitle {
-  font-size: 50px;
+  font-family: 'Dancing Script', Georgia, Serif;
+  font-weight: 900;
+  color: #ffef7c;
+  font-size: 60px;
+
   padding-left: 100px;
   padding-right: ;
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: ;
 }
 
 .notice {
-
+  text-align: center;
 }
 
-.eventCarousel {
-
-}
-
-.gachaCarousel {
-
+.carousel {
+  text-align: center;
+  font-family: 'Paytone One', Georgia, Serif;
+  font-size: 33px;
 }
 
 .latestNews {

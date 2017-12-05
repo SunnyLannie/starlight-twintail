@@ -37,13 +37,13 @@ class Home extends Component {
           contents={this.state.announcements}
         />
         <EventCarousel
-          className={styles.eventCarousel}
+          className={styles.carousel}
           category="Token"
           title="Kawaii Make My Day"
           img="assets/event/Kawaii-make-My-Day.png"
         />
         <GachaCarousel 
-          className={styles.gachaCarousel}
+          className={styles.carousel}
           category="Limited"
           startDate= {new Date('11/30/2017')}
           endDate= {new Date('12/10/2017')}
@@ -68,7 +68,7 @@ class Notice extends Component {
     );
 
     return(
-      <div>{messages}</div>
+      <div className={this.props.className}>{messages}</div>
     );
   };
 }
@@ -76,9 +76,9 @@ class Notice extends Component {
 class EventCarousel extends Component {
   render() {
     return(
-      <div>
-        <div>{this.props.category}</div>
-        <div>{this.props.title}</div>
+      <div className={this.props.className}>
+        <div>{this.props.category} Event:</div>
+        <div style={{fontFamily: 'Mirza', fontSize: '30px'}}>{this.props.title}</div>
         <img src={this.props.img} alt="Kawaii-Make-My-Day"></img>
         <CarouselTab />
       </div>
@@ -89,7 +89,7 @@ class EventCarousel extends Component {
 class GachaCarousel extends Component {
   render() {
     return(
-      <div>
+      <div className={this.props.className}>
         <div>{`${this.props.category} Gacha`}</div>
         <img src={this.props.img} alt="New Year 2016 Gacha"></img>
         <CarouselTab />
