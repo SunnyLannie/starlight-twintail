@@ -2,9 +2,9 @@
   
 }
 
-.pageHeader {
+.navbar {
   background-color: #EB6B8D;
-  height: 150px;
+  height: 90px;
   padding: 10px;
   color: white;
 }
@@ -13,22 +13,32 @@
   font-family: 'Dancing Script', Georgia, Serif;
   font-weight: 900;
   color: #ffef7c;
-  font-size: 60px;
+  font-size: 45px;
 
-  padding-left: 100px;
+  padding-left: 50px;
   padding-right: ;
-  padding-top: 40px;
+  padding-top: 5px;
   padding-bottom: ;
 }
 
 .notice {
   text-align: center;
+  background-color: #f7f4c5;
+  margin-top: 4px;
+  
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
 }
 
 .carousel {
   text-align: center;
   font-family: 'Paytone One', Georgia, Serif;
   font-size: 33px;
+}
+
+.carouselImg{
+  height: 150px;
 }
 
 .latestNews {

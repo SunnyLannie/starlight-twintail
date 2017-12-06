@@ -29,9 +29,7 @@ class Home extends Component {
   render(){
     return (
       <div className={styles.homepage}>
-        <header className={styles.pageHeader}>
-          <h1 className={styles.appTitle}>Starlight Twintail</h1>
-        </header>
+        
         <Notice
           className={styles.notice}
           contents={this.state.announcements}
@@ -60,15 +58,25 @@ class Home extends Component {
   };
 }
 
+class Navbar extends Component {
+  render() {
+    return(
+      <header className={styles.navbar}>
+        Top
+      </header>
+    );
+  };
+}
+
 class Notice extends Component {
   render() {
     const contents = this.props.contents;
-    var messages = contents.map((content, i) => <div key={i}>{content.message}</div>
+    var messages = contents.map((content, i) => <div className={this.props.className} key={i}>{content.message}</div>
 //      console.log(content.message);
     );
 
     return(
-      <div className={this.props.className}>{messages}</div>
+      <div>{messages}</div>
     );
   };
 }
@@ -79,7 +87,7 @@ class EventCarousel extends Component {
       <div className={this.props.className}>
         <div>{this.props.category} Event:</div>
         <div style={{fontFamily: 'Mirza', fontSize: '30px'}}>{this.props.title}</div>
-        <img src={this.props.img} alt="Kawaii-Make-My-Day"></img>
+        <img className={styles.carouselImg} src={this.props.img} alt="Kawaii-Make-My-Day"></img>
         <CarouselTab />
       </div>
     );
@@ -91,7 +99,7 @@ class GachaCarousel extends Component {
     return(
       <div className={this.props.className}>
         <div>{`${this.props.category} Gacha`}</div>
-        <img src={this.props.img} alt="New Year 2016 Gacha"></img>
+        <img className={styles.carouselImg} src={this.props.img} alt="New Year 2016 Gacha"></img>
         <CarouselTab />
       </div>
     );
