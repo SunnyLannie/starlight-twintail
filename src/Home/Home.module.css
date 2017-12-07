@@ -2,6 +2,54 @@
   
 }
 
+/* notice component */
+.notice {
+  text-align: center;
+  background-color: #f7f4c5;
+  margin-top: 0.25rem;
+  
+  border-top: 0.125rem solid black;
+  border-bottom: 0.125rem solid black;
+}
+
+/* carousel container? */
+.carousel {
+  position: relative;
+  text-align: center;
+  font-family: 'Paytone One', Georgia, Serif;
+  font-size: 1.875rem;
+  background-color: purple;
+}
+
+/* setting font for event title */
+.carousel .eventTitle {
+  font-family: 'Mirza';
+  font-size: 3.125rem;
+}
+
+/* mini banner */
+.carouselBannerMini{
+  height: 4.375rem;
+/*  position: relative;
+  top: 50%;
+  left: 30%;
+  transform: translateX(-250%) translateY(0%);*/
+}
+
+/* background styling carousel
+.carouselBG{
+
+}
+
+.latestNews {
+
+}
+
+.featuredIdol {
+  
+} */
+
+/*
 .navbar {
   background-color: #EB6B8D;
   height: 90px;
@@ -19,32 +67,4 @@
   padding-right: ;
   padding-top: 5px;
   padding-bottom: ;
-}
-
-.notice {
-  text-align: center;
-  background-color: #f7f4c5;
-  margin-top: 4px;
-  
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-
-}
-
-.carousel {
-  text-align: center;
-  font-family: 'Paytone One', Georgia, Serif;
-  font-size: 33px;
-}
-
-.carouselImg{
-  height: 150px;
-}
-
-.latestNews {
-
-}
-
-.featuredIdol {
-  
-}
+} */

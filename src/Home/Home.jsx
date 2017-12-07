@@ -36,11 +36,12 @@ class Home extends Component {
         />
         <EventCarousel
           className={styles.carousel}
-          category="Token"
-          title="Kawaii Make My Day"
-          img="assets/event/Kawaii-make-My-Day.png"
+          category="Live Groove Vocal Burst"
+          title="Sakura no Koro"
+          bannerMini="assets/event/sakura-no-koro-mini.png"
+          banner="assets/event/sakura-no-koro.png"
         />
-        <GachaCarousel 
+        {/*<GachaCarousel 
           className={styles.carousel}
           category="Limited"
           startDate= {new Date('11/30/2017')}
@@ -52,7 +53,7 @@ class Home extends Component {
         />
         <FeaturedIdol
           className={styles.featuredIdol}
-        />
+        />*/}
       </div>
     );
   };
@@ -81,14 +82,22 @@ class Notice extends Component {
   };
 }
 
+class Carousel extends Component {
+  render() {
+    return(
+      <div>
+        <img className={styles.carouselBG} src={this.props.banner} alt="Kawaii-Make-My-Day"></img>
+      </div>
+    );
+  };
+}
+
 class EventCarousel extends Component {
   render() {
     return(
-      <div className={this.props.className}>
-        <div>{this.props.category} Event:</div>
-        <div style={{fontFamily: 'Mirza', fontSize: '30px'}}>{this.props.title}</div>
-        <img className={styles.carouselImg} src={this.props.img} alt="Kawaii-Make-My-Day"></img>
-        <CarouselTab />
+      <div className={styles.carousel}>
+        <div className={styles.eventTitle}>{this.props.title} <img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img></div>
+        {/*<CarouselTab />*/}
       </div>
     );
   };
@@ -99,7 +108,7 @@ class GachaCarousel extends Component {
     return(
       <div className={this.props.className}>
         <div>{`${this.props.category} Gacha`}</div>
-        <img className={styles.carouselImg} src={this.props.img} alt="New Year 2016 Gacha"></img>
+        <img className={styles.carouselBG} src={this.props.img} alt="New Year 2016 Gacha"></img>
         <CarouselTab />
       </div>
     );
