@@ -31,28 +31,24 @@ class Home extends Component {
       <div className={styles.homepage}>
         
         <Notice
-          className={styles.notice}
           contents={this.state.announcements}
         />
         <EventCarousel
-          className={styles.carousel}
           category="Live Groove Vocal Burst"
-          title="Sakura no Koro"
+          song="桜の頃"
+          romanji="Sakura no Koro"
           bannerMini="assets/event/sakura-no-koro-mini.png"
           banner="assets/event/sakura-no-koro.png"
         />
         {/*<GachaCarousel 
-          className={styles.carousel}
           category="Limited"
           startDate= {new Date('11/30/2017')}
           endDate= {new Date('12/10/2017')}
           img="assets/gacha/newyear2016.png"
         />
         <LatestNews
-          className={styles.latestNews}
         />
         <FeaturedIdol
-          className={styles.featuredIdol}
         />*/}
       </div>
     );
@@ -72,7 +68,7 @@ class Navbar extends Component {
 class Notice extends Component {
   render() {
     const contents = this.props.contents;
-    var messages = contents.map((content, i) => <div className={this.props.className} key={i}>{content.message}</div>
+    var messages = contents.map((content, i) => <div className={styles.notice} key={i}>{content.message}</div>
 //      console.log(content.message);
     );
 
@@ -96,8 +92,11 @@ class EventCarousel extends Component {
   render() {
     return(
       <div className={styles.carousel}>
-        <div className={styles.eventTitle}>{this.props.title} <img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img></div>
-        {/*<CarouselTab />*/}
+        <div className={styles.eventSong}>{this.props.song}</div>
+        {/*<img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img>*/}
+        <CarouselTab
+        />
+        {/*<div className={styles.eventTitle}>{this.props.title}</div>*/}
       </div>
     );
   };
@@ -106,10 +105,11 @@ class EventCarousel extends Component {
 class GachaCarousel extends Component {
   render() {
     return(
-      <div className={this.props.className}>
+      <div className={styles.carousel}>
         <div>{`${this.props.category} Gacha`}</div>
         <img className={styles.carouselBG} src={this.props.img} alt="New Year 2016 Gacha"></img>
-        <CarouselTab />
+        <CarouselTab
+        />
       </div>
     );
   };
@@ -118,7 +118,8 @@ class GachaCarousel extends Component {
 class CarouselTab extends Component {
   render() {
     return(
-      <div>
+      <div className='carouselTab'>
+
       </div>
     );
   };
