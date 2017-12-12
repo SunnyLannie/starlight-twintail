@@ -35,8 +35,9 @@ class Home extends Component {
         />
         <EventCarousel
           category="Live Groove Vocal Burst"
-          song="桜の頃"
-          romanji="Sakura no Koro"
+          /*song="桜の頃"*/
+          song="純情Midnight伝説"
+          romanji="Junjou Midnight Densetsu"
           bannerMini="assets/event/sakura-no-koro-mini.png"
           banner="assets/event/sakura-no-koro.png"
         />
@@ -90,15 +91,26 @@ class Carousel extends Component {
 
 class EventCarousel extends Component {
   render() {
-    return(
-      <div className={styles.carousel}>
-        <div className={styles.eventSong}>{this.props.song}</div>
-        {/*<img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img>*/}
-        <CarouselTab
-        />
-        {/*<div className={styles.eventTitle}>{this.props.title}</div>*/}
-      </div>
-    );
+    if(this.props.romanji !== null){
+      return (
+        <div className={styles.carousel}>
+          <div className={styles.eventSong}>{this.props.song}</div>
+          <div className={styles.romanji}>{this.props.romanji}</div>
+          <CarouselTab
+          />
+        </div>
+      );
+    } else {
+      return(
+        <div className={styles.carousel}>
+          <div className={styles.eventSong}>{this.props.song}</div>
+          {/*<img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img>*/}
+          <CarouselTab
+          />
+          {/*<div className={styles.eventTitle}>{this.props.title}</div>*/}
+        </div>
+      );
+    }
   };
 }
 

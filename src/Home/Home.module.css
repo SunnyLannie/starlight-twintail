@@ -28,11 +28,20 @@
 /* setting font for event title */
 .carousel .eventSong {
   position: relative;
-  font-family: 'Mirza';
+  font-family: 'Concert One', 'Noto Sans Japanese';
   font-size: 3.125rem;
+  font-weight: 600;
   
   height: 3.125rem;
+}
 
+.romanji {
+  position: relative;
+  font-family: 'Concert One';
+  font-size: 1.876rem;
+  padding-top: 2rem;
+  
+  height: 30px;
 }
 
 /* mini banner */
