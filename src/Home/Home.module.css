@@ -1,5 +1,4 @@
 .homepage {
-  
 }
 
 /* notice component */
@@ -14,9 +13,10 @@
 
 /* carousel container? */
 .carousel {
-  position: relative;
   text-align: center;
   font-family: 'Paytone One', Georgia, Serif;
+  /*transform: translateY(100%);*/
+  margin-top: 25%;
 }
 
 /* carousel name text */
@@ -27,7 +27,6 @@
 
 /* setting font for event title */
 .carousel .eventSong {
-  position: relative;
   font-family: 'Concert One', 'Noto Sans Japanese';
   font-size: 3.125rem;
   font-weight: 600;
@@ -36,12 +35,9 @@
 }
 
 .romanji {
-  position: relative;
   font-family: 'Concert One';
   font-size: 1.876rem;
-  padding-top: 2rem;
-  
-  height: 30px;
+  margin-top: 2rem;
 }
 
 /* mini banner */
@@ -56,6 +52,26 @@
 /* Carousel single tab */
 .carousel .carouselTab {
   background-color: green;
+}
+
+.carouselTab .cardIconL {
+  float: left;
+}
+
+.carouselTab .cardIconR {
+  float: right;
+}
+
+.carouselTab .cardInfoL {
+  float: left;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.carouselTab .cardInfoR {
+  float: right;
+  text-align: justify;
+  white-space: pre-line;
 }
 
 /* background styling carousel

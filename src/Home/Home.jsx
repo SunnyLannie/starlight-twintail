@@ -38,8 +38,10 @@ class Home extends Component {
           /*song="桜の頃"*/
           song="純情Midnight伝説"
           romanji="Junjou Midnight Densetsu"
-          bannerMini="assets/event/sakura-no-koro-mini.png"
+          bannerMini="assets/event/junjou-midnight-densetsu-mini.png"
           banner="assets/event/sakura-no-koro.png"
+          rankSR="assets/event/jmdtakumi.png"
+          pointSR="assets/event/jmdrina.png"
         />
         {/*<GachaCarousel 
           category="Limited"
@@ -96,7 +98,10 @@ class EventCarousel extends Component {
         <div className={styles.carousel}>
           <div className={styles.eventSong}>{this.props.song}</div>
           <div className={styles.romanji}>{this.props.romanji}</div>
+          <img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img>
           <CarouselTab
+            rankSR={this.props.rankSR}
+            pointSR={this.props.pointSR}
           />
         </div>
       );
@@ -130,8 +135,42 @@ class GachaCarousel extends Component {
 class CarouselTab extends Component {
   render() {
     return(
-      <div className='carouselTab'>
+      <div className={styles.carouselTab}>
+        <img className={styles.cardIconL} src={this.props.rankSR} alt="jmdtakumi"></img>
+        <img className={styles.cardIconR} src={this.props.pointSR} alt="jmdrina"></img>
+        <div className={styles.cardInfoL}>
+          {`Vocal:
+          Visual:
+          Dance:`}
+        </div>
+        <div className={styles.cardInfoL}>
+          {`2000
+          4000
+          6000`}
+        </div>
+        <div className={styles.cardInfoR}>
+          {`Vocal
+          Visual
+          Dance`}
+        </div>
+      </div>
+    );
+  };
+}
 
+class CardInfoL extends Component {
+  render() {
+    return(
+      <div>
+      </div>
+    );
+  };
+}
+
+class CardInfoR extends Component {
+  render() {
+    return(
+      <div>
       </div>
     );
   };
