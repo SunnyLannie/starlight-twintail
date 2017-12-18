@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styles from "./Home.module.css"
+import styles from "./Home.module.css";
+import cx from 'classnames';
 
 class Home extends Component {
   state = {
@@ -136,24 +137,29 @@ class CarouselTab extends Component {
   render() {
     return(
       <div className={styles.carouselTab}>
-        <img className={styles.cardIconL} src={this.props.rankSR} alt="jmdtakumi"></img>
-        <img className={styles.cardIconR} src={this.props.pointSR} alt="jmdrina"></img>
-        <div className={styles.cardInfoL}>
-          {`Vocal:
-          Visual:
-          Dance:`}
-        </div>
-        <div className={styles.cardInfoL}>
-          {`2000
-          4000
-          6000`}
-        </div>
-        <div className={styles.cardInfoR}>
-          {`Vocal
-          Visual
-          Dance`}
-        </div>
+        <CardInfoL
+          card={this.props.rankSR}
+        />
+        <CardInfoR
+            card={this.props.pointSR}
+        />
+        {/*<div className={styles.cardInfoL}>
+                  {`Vocal:
+                  Visual:
+                  Dance:`}
+                </div>
+                <div className={styles.cardInfoL}>
+                  {`2000
+                  4000
+                  6000`}
+                </div>
+                <div className={styles.cardInfoR}>
+                  {`Vocal
+                  Visual
+                  Dance`}
+                </div>*/}
       </div>
+        
     );
   };
 }
@@ -161,7 +167,8 @@ class CarouselTab extends Component {
 class CardInfoL extends Component {
   render() {
     return(
-      <div>
+      <div className={styles.cardInfoL}>
+        <img src={this.props.card} alt="jmdtakumi"></img>
       </div>
     );
   };
@@ -170,7 +177,8 @@ class CardInfoL extends Component {
 class CardInfoR extends Component {
   render() {
     return(
-      <div>
+      <div className={styles.cardInfoR}>
+        <img src={this.props.card} alt="jmdrina"></img>
       </div>
     );
   };

@@ -51,27 +51,25 @@
 
 /* Carousel single tab */
 .carousel .carouselTab {
-  background-color: green;
-}
-
-.carouselTab .cardIconL {
-  float: left;
-}
-
-.carouselTab .cardIconR {
-  float: right;
+  text-align: center;
+  width: 800px;
+  overflow: hidden;
 }
 
 .carouselTab .cardInfoL {
   float: left;
   text-align: justify;
   white-space: pre-line;
+  width: 400px;
+  display: inline-block;
 }
 
 .carouselTab .cardInfoR {
   float: right;
   text-align: justify;
   white-space: pre-line;
+  width: 400px;
+  display: inline-block;
 }
 
 /* background styling carousel
