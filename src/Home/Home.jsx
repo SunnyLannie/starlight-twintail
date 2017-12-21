@@ -137,11 +137,15 @@ class CarouselTab extends Component {
   render() {
     return(
       <div className={styles.carouselTab}>
-        <CardInfoL
+        <CardInfo
+          className={styles.cardInfoL}
           card={this.props.rankSR}
+          alt={'jmdtakumi'}
         />
-        <CardInfoR
-            card={this.props.pointSR}
+        <CardInfo
+          className={styles.cardInfoR}
+          card={this.props.pointSR}
+          alt={'jmdrina'}
         />
         {/*<div className={styles.cardInfoL}>
                   {`Vocal:
@@ -164,21 +168,11 @@ class CarouselTab extends Component {
   };
 }
 
-class CardInfoL extends Component {
+class CardInfo extends Component {
   render() {
     return(
-      <div className={styles.cardInfoL}>
-        <img src={this.props.card} alt="jmdtakumi"></img>
-      </div>
-    );
-  };
-}
-
-class CardInfoR extends Component {
-  render() {
-    return(
-      <div className={styles.cardInfoR}>
-        <img src={this.props.card} alt="jmdrina"></img>
+      <div className={this.props.className}>
+        <img className={styles.cardIcon} src={this.props.card} alt={this.props.alt}></img>
       </div>
     );
   };
