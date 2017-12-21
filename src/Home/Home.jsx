@@ -99,7 +99,7 @@ class EventCarousel extends Component {
         <div className={styles.carousel}>
           <div className={styles.eventSong}>{this.props.song}</div>
           <div className={styles.romanji}>{this.props.romanji}</div>
-          <img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img>
+          <div><img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img></div>
           <CarouselTab
             rankSR={this.props.rankSR}
             pointSR={this.props.pointSR}

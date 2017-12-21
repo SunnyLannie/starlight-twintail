@@ -51,8 +51,8 @@
 
 /* Carousel single tab */
 .carousel .carouselTab {
-  text-align: center;
-  width: 800px;
+  width: 900px;
+  display: inline-block;
   overflow: hidden;
 }
 
@@ -61,7 +61,6 @@
   text-align: justify;
   white-space: pre-line;
   width: 400px;
-  display: inline-block;
 }
 
 .carouselTab .cardInfoR {
@@ -69,7 +68,6 @@
   text-align: justify;
   white-space: pre-line;
   width: 400px;
-  display: inline-block;
 }
 
 /* background styling carousel
