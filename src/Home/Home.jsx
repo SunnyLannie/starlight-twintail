@@ -59,16 +59,6 @@ class Home extends Component {
   };
 }
 
-class Navbar extends Component {
-  render() {
-    return(
-      <header className={styles.navbar}>
-        Top
-      </header>
-    );
-  };
-}
-
 class Notice extends Component {
   render() {
     const contents = this.props.contents;
@@ -180,9 +170,12 @@ class CardInfo extends Component {
               styles.cardIcon,
               this.props.float)}
             src={this.props.card} alt={this.props.alt}></img>
-          <span>Vocal</span>
+          <div>Vocal</div>
           <div>Dance</div>
           <div>Visual</div>
+          <div className={styles.skillDescription}>
+            I love Hibiki
+          </div>
       </div>
     );
   };

@@ -74,6 +74,10 @@
   background-color: yellow;
 }
 
+.cardInfo .skillDescription{
+  clear: both;
+}
+
 .carouselTab .cardIcon {
   width: 110px;
 }
