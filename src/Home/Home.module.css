@@ -56,27 +56,36 @@
   overflow: hidden;
 }
 
-.carouselTab .cardInfoL {
-  float: left;
-  text-align: left;
+.carouselTab .cardInfo {
   white-space: pre-line;
   width: 350px;
   height: 200px;
+}
+
+.cardInfo.left{
+  float: left;
+  text-align: left;
   background-color: green;
 }
 
-.carouselTab .cardInfoR {
+.cardInfo.right{
   float: right;
   text-align: right;
-  white-space: pre-line;
-  width: 350px;
-  height: 200px;
   background-color: yellow;
 }
 
 .carouselTab .cardIcon {
   width: 110px;
 }
+
+.cardIcon.left{
+  float: left;
+}
+
+.cardIcon.right{
+  float: right;
+}
+
 
 /* background styling carousel
 .carouselBG{

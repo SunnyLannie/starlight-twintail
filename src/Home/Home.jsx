@@ -138,13 +138,15 @@ class CarouselTab extends Component {
     return(
       <div className={styles.carouselTab}>
         <CardInfo
-          className={styles.cardInfoL}
+          className={styles.cardInfo}
           card={this.props.rankSR}
+          float={styles.left}
           alt={'jmdtakumi'}
         />
         <CardInfo
-          className={styles.cardInfoR}
+          className={styles.cardInfo}
           card={this.props.pointSR}
+          float={styles.right}
           alt={'jmdrina'}
         />
         {/*<div className={styles.cardInfoL}>
@@ -171,8 +173,16 @@ class CarouselTab extends Component {
 class CardInfo extends Component {
   render() {
     return(
-      <div className={this.props.className}>
-        <img className={styles.cardIcon} src={this.props.card} alt={this.props.alt}></img>
+      <div className={cx(
+          this.props.className,
+          this.props.float)}>
+        <img className={cx(
+              styles.cardIcon,
+              this.props.float)}
+            src={this.props.card} alt={this.props.alt}></img>
+          <span>Vocal</span>
+          <div>Dance</div>
+          <div>Visual</div>
       </div>
     );
   };
