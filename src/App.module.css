@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.siteWrapper {
+  margin-top: 0px;
+}
+
 .appLogo {
   animation: App-logo-spin infinite 1s linear;
   height: 80px;
@@ -23,16 +27,20 @@
 }
 
 .navBar {
-  height: 50px;
   background-color: cyan; 
+  margin: 0px;
 }
 
 .siteNav{
-  
+  padding: 0.625rem;
+  text-align: center;
+  margin: 0px;
 }
 
-.navBar .siteNav li {
+.siteNav li {
   display: inline;
+  padding: 0 .3125rem;
+  font-size: 1.125rem;
 }
 
 @keyframes App-logo-spin {
