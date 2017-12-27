@@ -19,6 +19,18 @@ class Home extends Component {
         message: `Check update notes here. Forced update on`
       },
     ],
+    // 0 index fetches main event
+    currentEvent: [
+      {
+        category: "Live Groove Vocal Burst",
+        song: "純情Midnight伝説",
+        romanji: "Junjou Midnight Densetsu",
+        bannerMini: "assets/event/junjou-midnight-densetsu-mini.png",
+        banner: "assets/event/sakura-no-koro.png",
+        rankSR: "assets/event/jmdtakumi.png",
+        pointSR:"assets/event/jmdrina.png",
+      },
+    ],
     news: [
       {
         category: 'Upcoming Event',
@@ -35,14 +47,7 @@ class Home extends Component {
           contents={this.state.announcements}
         />
         <EventCarousel
-          category="Live Groove Vocal Burst"
-          /*song="桜の頃"*/
-          song="純情Midnight伝説"
-          romanji="Junjou Midnight Densetsu"
-          bannerMini="assets/event/junjou-midnight-densetsu-mini.png"
-          banner="assets/event/sakura-no-koro.png"
-          rankSR="assets/event/jmdtakumi.png"
-          pointSR="assets/event/jmdrina.png"
+          event={this.state.currentEvent[0]}
         />
         {/*<GachaCarousel 
           category="Limited"
@@ -59,6 +64,7 @@ class Home extends Component {
   };
 }
 
+// prop: contents, origin: Home, statename: announcement
 class Notice extends Component {
   render() {
     const contents = this.props.contents;
@@ -72,6 +78,7 @@ class Notice extends Component {
   };
 }
 
+// props: 
 class Carousel extends Component {
   render() {
     return(
@@ -82,26 +89,28 @@ class Carousel extends Component {
   };
 }
 
+// props:
 class EventCarousel extends Component {
   render() {
-    if(this.props.romanji !== null){
+    var event = this.props.event;
+    if(event.romanji !== null){
       return (
         <div className={styles.carousel}>
-          <div className={styles.eventSong}>{this.props.song}</div>
-          <div className={styles.romanji}>{this.props.romanji}</div>
-          <div><img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img></div>
-          <CarouselTab
-            rankSR={this.props.rankSR}
-            pointSR={this.props.pointSR}
+          <div className={styles.eventSong}>{event.song}</div>
+          <div className={styles.romanji}>{event.romanji}</div>
+          <div><img className={styles.carouselBannerMini} src={event.bannerMini} alt={event.romanji+'-mini'}></img></div>
+          <CarouselCardInfo
+            rankSR={event.rankSR}
+            pointSR={event.pointSR}
           />
         </div>
       );
     } else {
       return(
         <div className={styles.carousel}>
-          <div className={styles.eventSong}>{this.props.song}</div>
+          <div className={styles.eventSong}>{event.song}</div>
           {/*<img className={styles.carouselBannerMini} src={this.props.bannerMini} alt="sakura-no-koro"></img>*/}
-          <CarouselTab
+          <CarouselCardInfo
           />
           {/*<div className={styles.eventTitle}>{this.props.title}</div>*/}
         </div>
@@ -116,14 +125,13 @@ class GachaCarousel extends Component {
       <div className={styles.carousel}>
         <div>{`${this.props.category} Gacha`}</div>
         <img className={styles.carouselBG} src={this.props.img} alt="New Year 2016 Gacha"></img>
-        <CarouselTab
-        />
+        
       </div>
     );
   };
 }
 
-class CarouselTab extends Component {
+class CarouselCardInfo extends Component {
   render() {
     return(
       <div className={styles.carouselTab}>
